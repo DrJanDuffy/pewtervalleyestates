@@ -1,14 +1,8 @@
-
 import './App.css'
-import { useState } from 'react'
-import ContactForm from './components/ContactForm'
-import HomeValueForm from './components/HomeValueForm'
 
 function App() {
-  const [activeTab, setActiveTab] = useState('buy');
-
   return (
-    <div className="pv-app">
+    <div className="pv-container">
       {/* 1. Hero Section */}
       <section className="pv-hero">
         <div className="pv-hero-content">
@@ -30,55 +24,20 @@ function App() {
         </div>
       </section>
 
-      {/* 1b. Why Pewter Valley Estates Section */}
-      <section className="pv-why-pve">
-        <h3>Why Pewter Valley Estates?</h3>
-        <ul>
-          <li>Beautiful parks and walking trails</li>
-          <li>Top-rated local schools</li>
-          <li>Vibrant community events</li>
-          <li>Convenient access to shopping and dining</li>
-        </ul>
-      </section>
-
       {/* 2. Pain Point Section */}
       <section className="pv-pain-point">
-        <h2>Finding Your Perfect Home Shouldn't Be Stressful</h2>
-        <div className="pv-pain-grid">
-          <div className="pv-pain-card">
-            <h3>Limited Inventory</h3>
-            <p>Most buyers struggle to find available homes in Pewter Valley's competitive market.</p>
-          </div>
-          <div className="pv-pain-card">
-            <h3>Bidding Wars</h3>
-            <p>Without insider knowledge, you might overpay or miss out on your dream home.</p>
-          </div>
-          <div className="pv-pain-card">
-            <h3>Hidden Issues</h3>
-            <p>Unexpected property problems can cost thousands after purchase.</p>
-          </div>
-        </div>
+        <h3>Struggling to find the perfect home or sell for top dollar?</h3>
+        <p>Discover how local expertise makes all the difference in Pewter Valley Estates.</p>
       </section>
 
       {/* 3. Solution Section */}
       <section className="pv-solution">
-        <h2>Your Pewter Valley Specialist</h2>
-        <div className="pv-solution-content">
-          <div className="pv-solution-image">
-            {/* Agent image would go here */}
-          </div>
-          <div className="pv-solution-text">
-            <h3>Meet Dr. Jan Duffy, REALTOR®</h3>
-            <ul>
-              <li>20+ years of experience in Pewter Valley real estate</li>
-              <li>Access to exclusive off-market properties</li>
-              <li>PhD in Real Estate Economics</li>
-              <li>Negotiated 500+ successful transactions</li>
-              <li>Lifetime resident of Pewter Valley</li>
-            </ul>
-            <p>"I don't just sell homes in Pewter Valley - I help clients build their futures here."</p>
-          </div>
-        </div>
+        <h3>Why Work With Dr. Jan Duffy?</h3>
+        <ul>
+          <li>Deep local knowledge</li>
+          <li>Personalized service</li>
+          <li>Proven results in Pewter Valley Estates</li>
+        </ul>
       </section>
 
       {/* 4. Social Proof Section */}
@@ -120,7 +79,7 @@ function App() {
         {/* TODO: Add contact form or scheduling widget */}
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
