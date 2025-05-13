@@ -1,12 +1,6 @@
-
 import './App.css'
-import { useState } from 'react'
-import ContactForm from './components/ContactForm'
-import HomeValueForm from './components/HomeValueForm'
 
 function App() {
-  const [activeTab, setActiveTab] = useState('buy');
-
   return (
     <div className="pv-app">
       {/* 1. Hero Section */}
@@ -89,17 +83,7 @@ function App() {
 
       {/* 5. Interactive Tool Section */}
       <section className="pv-interactive-tool">
-        <h3>Explore Your Home Value or Search Listings</h3>
-        {/* RealScout Office Listings Widget */}
-        <realscout-office-listings
-          agent-encoded-id="QWdlbnQtMjI1MDUw"
-          sort-order="NEWEST"
-          listing-status="For Sale"
-          property-types="SFR,MF"
-          price-min="500000"
-          price-max="700000"
-        ></realscout-office-listings>
-        {/* TODO: Integrate Homebot, CloudCMA, Percy.ai widgets */}
+        <realscout-office-listings agent-encoded-id="QWdlbnQtMjI1MDUw" sort-order="NEWEST" listing-status="For Sale" property-types="SFR,MF" price-min="500000" price-max="700000"></realscout-office-listings>
       </section>
 
       {/* 6. Objection Handling Section */}
