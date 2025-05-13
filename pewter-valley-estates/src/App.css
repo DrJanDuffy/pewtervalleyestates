@@ -290,6 +290,178 @@ h3 {
   background: #16B286;
 }
 
+/* Testimonial Carousel Controls */
+.pv-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.pv-carousel-controls button {
+  background: var(--pv-accent-buyer);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: var(--pv-box-shadow);
+  transition: background 0.2s;
+}
+.pv-carousel-controls button:hover {
+  background: var(--pv-accent-seller);
+}
+.pv-testimonial-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Buyer Journey Bar */
+.pv-buyer-journey {
+  background: #f7f9fc;
+  border-radius: var(--pv-radius);
+  box-shadow: var(--pv-box-shadow);
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.pv-journey-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+.pv-journey-bar li {
+  font-weight: 500;
+  color: #b0b8c1;
+  display: flex;
+  align-items: center;
+}
+.pv-journey-bar li.active {
+  color: var(--pv-primary);
+}
+.pv-journey-arrow {
+  margin: 0 0.5rem;
+  color: #b0b8c1;
+}
+.pv-journey-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.pv-journey-controls button {
+  background: var(--pv-accent-seller);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--pv-box-shadow);
+  transition: background 0.2s;
+}
+.pv-journey-controls button:disabled {
+  background: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+.pv-journey-reentry {
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+/* Microlearning Module */
+.pv-microlearning {
+  background: #f7f9fc;
+  border-radius: var(--pv-radius);
+  box-shadow: var(--pv-box-shadow);
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+}
+.pv-microlearning-video {
+  margin-bottom: 1.5rem;
+}
+.pv-mortgage-calc {
+  margin-top: 1rem;
+  text-align: left;
+}
+.pv-calc-toggle {
+  background: var(--pv-accent-buyer);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--pv-box-shadow);
+  margin-bottom: 1rem;
+}
+.pv-calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.pv-calc-form label {
+  font-weight: 600;
+  color: var(--pv-primary);
+}
+.pv-calc-form input {
+  border: 1px solid #c3d0e0;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1em;
+  background: #fff;
+  margin-top: 0.25rem;
+}
+.pv-calc-form button[type="submit"] {
+  background: var(--pv-accent-seller);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--pv-box-shadow);
+  margin-top: 0.5rem;
+}
+.pv-calc-result {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--pv-primary);
+}
+
+/* Geofence Callout */
+.pv-geofence {
+  background: #f7f9fc;
+  border-radius: var(--pv-radius);
+  box-shadow: var(--pv-box-shadow);
+  padding: 1.5rem 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.pv-geofence-success {
+  color: var(--pv-accent-seller);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.pv-geofence-fail {
+  color: #b91c1c;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Sticky CTA enhancement */
 .pv-sticky-cta {
   display: none;
 }
@@ -310,5 +482,14 @@ h3 {
     width: 90%;
     font-size: 1.2rem;
     padding: 1.2rem 0;
+    background: var(--pv-accent-seller);
+    color: #fff;
+    border: none;
+    border-radius: var(--pv-radius);
+    box-shadow: var(--pv-box-shadow);
+    transition: background 0.2s;
+  }
+  .pv-sticky-cta .pv-contact-btn:hover {
+    background: var(--pv-accent-buyer);
   }
 }

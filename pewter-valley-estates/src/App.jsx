@@ -1,6 +1,17 @@
 import './App.css'
+import TestimonialsCarousel from './components/TestimonialsCarousel'
+import BuyerJourney from './components/BuyerJourney'
+import MicrolearningModule from './components/MicrolearningModule'
+import NeighborhoodGeofence from './components/NeighborhoodGeofence'
+import ContactForm from './components/ContactForm'
+import HomeValueForm from './components/HomeValueForm'
 
 function App() {
+  // Analytics & A/B test stubs
+  // TODO: Replace with real analytics/event hooks
+  // window.analytics.track('page_view', { cd1: 'buyer', cd2: 'homepage' });
+  // window.abTest.assign('hero-cta-variant');
+
   return (
     <div className="pv-app">
       {/* 1. Hero Section */}
@@ -34,6 +45,9 @@ function App() {
           <li>Convenient access to shopping and dining</li>
         </ul>
       </section>
+
+      {/* Neighborhood Geofencing Callout */}
+      <NeighborhoodGeofence />
 
       {/* 2. Pain Point Section */}
       <section className="pv-pain-point">
@@ -75,15 +89,28 @@ function App() {
         </div>
       </section>
 
+      {/* Buyer Journey Progress Bar */}
+      <BuyerJourney />
+
+      {/* Microlearning Module */}
+      <MicrolearningModule />
+
       {/* 4. Social Proof Section */}
       <section className="pv-social-proof">
         <h3>What Clients Say</h3>
-        {/* TODO: Add testimonials, reviews, and recent sales */}
+        <TestimonialsCarousel />
       </section>
 
       {/* 5. Interactive Tool Section */}
       <section className="pv-interactive-tool">
         <realscout-office-listings agent-encoded-id="QWdlbnQtMjI1MDUw" sort-order="NEWEST" listing-status="For Sale" property-types="SFR,MF" price-min="500000" price-max="700000"></realscout-office-listings>
+        {/* TODO: Integrate Homebot valuation widget in Shadow DOM container here */}
+        {/* TODO: Integrate CloudCMA React wrapper with lazy loading here */}
+        {/* TODO: Integrate Percy.ai HVS-Autocomplete here */}
+        <div className="pv-widget-fallback">
+          <h4>Curious about your home value?</h4>
+          <HomeValueForm />
+        </div>
       </section>
 
       {/* 6. Objection Handling Section */}
@@ -100,9 +127,13 @@ function App() {
       {/* 7. Clear CTA Section */}
       <section className="pv-cta">
         <h3>Ready to take the next step?</h3>
-        <button className="pv-contact-btn">Contact Dr. Jan Duffy</button>
-        {/* TODO: Add contact form or scheduling widget */}
+        <ContactForm />
       </section>
+
+      {/* Sticky CTA for mobile */}
+      <div className="pv-sticky-cta">
+        <button className="pv-contact-btn">Contact Dr. Jan Duffy</button>
+      </div>
     </div>
   );
 }
