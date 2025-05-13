@@ -143,3 +143,172 @@ section {
     padding: 3rem 2.5rem;
   }
 }
+
+.pv-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pv-hero-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pv-hero-main-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--pv-radius);
+  box-shadow: var(--pv-box-shadow);
+  background: #e6eaf0;
+}
+
+.pv-hero-text {
+  text-align: center;
+}
+
+.pv-agent-name {
+  color: var(--pv-accent-seller);
+  font-weight: 700;
+}
+
+.pv-agent-photo {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pv-agent-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: var(--pv-box-shadow);
+  background: #e6eaf0;
+}
+
+@media (min-width: 768px) {
+  .pv-hero-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .pv-hero-image {
+    flex: 1 1 50%;
+    max-width: 400px;
+  }
+  .pv-hero-text {
+    flex: 1 1 50%;
+    text-align: left;
+  }
+  .pv-agent-photo {
+    justify-content: flex-start;
+  }
+}
+
+.pv-why-pve {
+  background: #f0f6fa;
+  border-left: 6px solid var(--pv-accent-buyer);
+  margin-bottom: 1.5rem;
+}
+.pv-why-pve ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.pv-why-pve li {
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+
+.pv-testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.pv-testimonials blockquote {
+  background: #f7f9fc;
+  border-left: 4px solid var(--pv-accent-seller);
+  margin: 0;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+  border-radius: var(--pv-radius);
+  box-shadow: var(--pv-box-shadow);
+}
+.pv-testimonials footer {
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 0.5em;
+  text-align: right;
+}
+
+.pv-widget-fallback {
+  margin-top: 1.5rem;
+  background: #fff7f7;
+  border: 1px solid #f3cccc;
+  border-radius: var(--pv-radius);
+  padding: 1.5rem;
+  box-shadow: var(--pv-box-shadow);
+}
+.pv-request-listings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.pv-request-listings-form label {
+  font-weight: 600;
+  color: var(--pv-primary);
+}
+.pv-request-listings-form input,
+.pv-request-listings-form textarea {
+  border: 1px solid #c3d0e0;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1em;
+  background: #f7f9fc;
+}
+.pv-request-listings-form button {
+  background: var(--pv-accent-buyer);
+  color: #fff;
+  border: none;
+  border-radius: var(--pv-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: var(--pv-box-shadow);
+  transition: background 0.2s;
+}
+.pv-request-listings-form button:hover {
+  background: var(--pv-accent-seller);
+}
+
+.pv-sticky-cta {
+  display: none;
+}
+@media (max-width: 767px) {
+  .pv-sticky-cta {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    text-align: center;
+  }
+  .pv-sticky-cta .pv-contact-btn {
+    width: 90%;
+    font-size: 1.2rem;
+    padding: 1.2rem 0;
+  }
+}
