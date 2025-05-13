@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 function ContactForm() {
@@ -9,7 +8,7 @@ function ContactForm() {
     interest: '',
     message: ''
   });
-  
+
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     error: null
@@ -25,19 +24,19 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Here you would typically send the data to your backend or email service
     // For demo purposes, we'll just simulate a successful submission
-    
+
     console.log('Form submitted:', formData);
-    
+
     // Simulate API call
     setTimeout(() => {
       setFormStatus({
         submitted: true,
         error: null
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -46,7 +45,7 @@ function ContactForm() {
         interest: '',
         message: ''
       });
-      
+
       // Reset status after 5 seconds
       setTimeout(() => {
         setFormStatus({
@@ -58,74 +57,78 @@ function ContactForm() {
   };
 
   return (
-    <div className="pv-contact-form">
+    <div className="contact-form-container">
       {formStatus.submitted ? (
-        <div className="pv-form-success">
-          <h3>Thank you for contacting me!</h3>
-          <p>I'll be in touch with you shortly.</p>
+        <div className="form-success">
+          <h3>Thank you for reaching out!</h3>
+          <p>Dr. Jan Duffy will contact you shortly.</p>
         </div>
       ) : (
-        <form id="contact-form" onSubmit={handleSubmit}>
-          <div className="pv-form-group">
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Your Name" 
-              required 
+              required
             />
           </div>
-          <div className="pv-form-group">
-            <input 
-              type="email" 
-              id="contact-email" 
-              name="email" 
+
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Your Email" 
-              required 
+              required
             />
           </div>
-          <div className="pv-form-group">
-            <input 
-              type="tel" 
-              id="phone" 
-              name="phone" 
+
+          <div className="form-group">
+            <label htmlFor="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Your Phone" 
             />
           </div>
-          <div className="pv-form-group">
-            <select 
-              id="interest" 
+
+          <div className="form-group">
+            <label htmlFor="interest">I'm interested in</label>
+            <select
+              id="interest"
               name="interest"
               value={formData.interest}
               onChange={handleChange}
+              required
             >
-              <option value="">I'm interested in...</option>
-              <option value="buying">Buying a home</option>
-              <option value="selling">Selling my home</option>
-              <option value="both">Both buying and selling</option>
-              <option value="valuation">Home valuation</option>
+              <option value="">Select an option</option>
+              <option value="buying">Buying in Pewter Valley</option>
+              <option value="selling">Selling my Pewter Valley home</option>
+              <option value="information">Community information</option>
               <option value="other">Other</option>
             </select>
           </div>
-          <div className="pv-form-group full-width">
-            <textarea 
-              id="message" 
-              name="message" 
+
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Your Message" 
               rows="4"
             ></textarea>
           </div>
-          <button type="submit" className="pv-submit-btn">
-            Send Message
-          </button>
+
+          <button type="submit" className="submit-button">Send Message</button>
         </form>
       )}
     </div>
