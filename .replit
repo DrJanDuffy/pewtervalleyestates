@@ -5,4 +5,17 @@ run = "node index.js"
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "node index.js"]
+run = ["sh", "-c", "npx http-server pewter-valley-estates/dist -p 3000 -a 0.0.0.0"]
+build = ["sh", "-c", "cd pewter-valley-estates && npm install && npm run build"]
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 22930014
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd pewter-valley-estates && npm run dev"
