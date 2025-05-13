@@ -5,10 +5,23 @@ function App() {
     <div className="pv-container">
       {/* 1. Hero Section */}
       <section className="pv-hero">
-        <h1>Welcome to Pewter Valley Estates — Test Deployment</h1>
-        <h2>Presented by Dr. Jan Duffy, REALTOR®</h2>
-        <p>Your hyperlocal real estate expert for Pewter Valley Estates.</p>
-        {/* TODO: Add hero image and branding */}
+        <div className="pv-hero-content">
+          {/* Hero Image Placeholder */}
+          <div className="pv-hero-image">
+            {/* TODO: Replace with a high-quality image of Pewter Valley Estates */}
+            <img src="/hero-placeholder.jpg" alt="Pewter Valley Estates" className="pv-hero-main-img" />
+          </div>
+          <div className="pv-hero-text">
+            <h1>Welcome to Pewter Valley Estates</h1>
+            <h2>Presented by <span className="pv-agent-name">Dr. Jan Duffy, REALTOR®</span></h2>
+            <p>Your hyperlocal real estate expert for Pewter Valley Estates.</p>
+            {/* Dr. Jan Duffy's Photo Placeholder */}
+            <div className="pv-agent-photo">
+              {/* TODO: Replace with Dr. Jan Duffy's professional photo */}
+              <img src="/agent-placeholder.jpg" alt="Dr. Jan Duffy, REALTOR" className="pv-agent-img" />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 2. Pain Point Section */}
@@ -36,7 +49,16 @@ function App() {
       {/* 5. Interactive Tool Section */}
       <section className="pv-interactive-tool">
         <h3>Explore Your Home Value or Search Listings</h3>
-        {/* TODO: Integrate Homebot, RealScout, CloudCMA, Percy.ai widgets */}
+        {/* RealScout Office Listings Widget */}
+        <realscout-office-listings
+          agent-encoded-id="QWdlbnQtMjI1MDUw"
+          sort-order="NEWEST"
+          listing-status="For Sale"
+          property-types="SFR,MF"
+          price-min="500000"
+          price-max="700000"
+        ></realscout-office-listings>
+        {/* TODO: Integrate Homebot, CloudCMA, Percy.ai widgets */}
       </section>
 
       {/* 6. Objection Handling Section */}
