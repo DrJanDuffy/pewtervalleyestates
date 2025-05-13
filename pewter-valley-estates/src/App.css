@@ -496,22 +496,27 @@ h3 {
 
 .pv-kcm-blog {
   margin: 2rem 0;
-  background: #f7f9fc;
+  background: #eaf3fb; /* Light blue for contrast */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 2rem 1rem;
 }
-
+.pv-kcm-blog h3 {
+  color: #0A2540;
+  border-bottom: 2px solid #3A8DDE;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
 .pv-kcm-iframe-container {
   width: 100%;
   overflow-x: auto;
 }
-
 .pv-kcm-iframe-container iframe {
   width: 100%;
   min-width: 320px;
   max-width: 100%;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #3A8DDE; /* Accent color border */
   background: #fff;
+  box-shadow: 0 4px 24px rgba(58, 141, 222, 0.15); /* Stronger shadow */
 }
