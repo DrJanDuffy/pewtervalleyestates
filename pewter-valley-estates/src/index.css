@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --pv-bg: #f7f9fc;
 }
 
 * {
@@ -19,9 +21,10 @@
   padding: 0;
 }
 
-body {
+body, #root {
   margin: 0;
   min-width: 320px;
+  background: var(--pv-bg) !important;
   min-height: 100vh;
 }
 
