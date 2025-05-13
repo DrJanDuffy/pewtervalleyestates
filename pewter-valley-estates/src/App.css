@@ -493,3 +493,25 @@ h3 {
     background: var(--pv-accent-buyer);
   }
 }
+
+.pv-kcm-blog {
+  margin: 2rem 0;
+  background: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem 1rem;
+}
+
+.pv-kcm-iframe-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pv-kcm-iframe-container iframe {
+  width: 100%;
+  min-width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}

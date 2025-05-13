@@ -5,6 +5,7 @@ import MicrolearningModule from './components/MicrolearningModule'
 import NeighborhoodGeofence from './components/NeighborhoodGeofence'
 import ContactForm from './components/ContactForm'
 import HomeValueForm from './components/HomeValueForm'
+import KcmBlogFeed from './components/KcmBlogFeed'
 
 function App() {
   // Analytics & A/B test stubs
@@ -100,6 +101,9 @@ function App() {
         <h3>What Clients Say</h3>
         <TestimonialsCarousel />
       </section>
+
+      {/* KCM Blog Feed Section */}
+      <KcmBlogFeed />
 
       {/* 5. Interactive Tool Section */}
       <section className="pv-interactive-tool">
