@@ -1,0 +1,145 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --pv-primary: #0A2540;
+  --pv-accent-buyer: #3A8DDE;
+  --pv-accent-seller: #16B286;
+  --pv-bg: #F7F9FC;
+  --pv-box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --pv-max-width: 1200px;
+  --pv-radius: 12px;
+}
+
+body {
+  background: var(--pv-bg);
+  color: var(--pv-primary);
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.pv-container {
+  max-width: var(--pv-max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+section {
+  background: #fff;
+  border-radius: var(--pv-radius);
+  box-shadow: var(--pv-box-shadow);
+  padding: 2rem 1.5rem;
+  min-height: 180px;
+}
+
+.pv-hero {
+  text-align: center;
+  background: linear-gradient(90deg, var(--pv-accent-buyer) 0%, var(--pv-accent-seller) 100%);
+  color: #fff;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pv-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pv-hero h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.pv-contact-btn {
+  background: var(--pv-accent-seller);
+  color: #fff;
+  border: none;
+  border-radius: var(--pv-radius);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--pv-box-shadow);
+  transition: background 0.2s;
+}
+
+.pv-contact-btn:hover {
+  background: var(--pv-accent-buyer);
+}
+
+@media (min-width: 576px) {
+  .pv-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  section {
+    grid-column: 2 / span 6;
+  }
+}
+
+@media (min-width: 768px) {
+  .pv-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  section {
+    grid-column: 3 / span 8;
+  }
+  .pv-hero {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pv-container {
+    padding: 2.5rem;
+  }
+  section {
+    padding: 3rem 2.5rem;
+  }
+}
