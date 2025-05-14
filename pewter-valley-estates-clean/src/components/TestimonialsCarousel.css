@@ -1,0 +1,46 @@
+.pv-testimonials-carousel {
+  background: #f7f9fc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pv-testimonials-carousel blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #0A2540;
+  border-left: 4px solid #16B286;
+  background: #fff;
+  border-radius: 8px;
+  margin: 0 0 1rem 0;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.pv-testimonials-carousel footer {
+  font-size: 1rem;
+  color: #3A8DDE;
+  margin-top: 0.5em;
+  text-align: right;
+}
+.pv-carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.pv-carousel-controls button {
+  background: #16B286;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+.pv-carousel-controls button:hover {
+  background: #3A8DDE;
+} 
